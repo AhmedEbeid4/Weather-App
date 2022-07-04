@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="160dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="4dp"
+    app:cardCornerRadius="25dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/third_color">
+        <ImageView
+            android:layout_width="85sp"
+            android:layout_height="85dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/sunny_s_cloudy"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="6dp"
+            android:id="@+id/Searched_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/open_sans_semi_bold_not_italic"
+            android:textColor="@color/white"
+            android:text="18"
+            android:id="@+id/searchedTemp"
+            android:textSize="30sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="24dp"
+            android:layout_toRightOf="@id/searchedTemp"
+            android:text="°C"
+            android:fontFamily="@font/the_confession_full_regular_qz"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Few Clouds"
+            android:layout_below="@id/searchedTemp"
+            android:fontFamily="@font/the_confession_full_regular_qz"
+            android:id="@+id/searchedDesc"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#9a9a9a"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01 July"
+            android:layout_below="@id/searchedDesc"
+            android:fontFamily="@font/the_confession_full_regular_qz"
+            android:id="@+id/searchedDate"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#9a9a9a"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cairo"
+            android:id="@+id/Searched_city"
+            android:fontFamily="@font/open_sans_semi_bold_not_italic"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:textAlignment="center"
+            android:layout_margin="10dp"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
