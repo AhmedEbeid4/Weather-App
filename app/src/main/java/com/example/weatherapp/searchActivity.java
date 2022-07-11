@@ -151,35 +151,17 @@ public class searchActivity extends AppCompatActivity {
         bottomBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
+                DataPasser dataPasser=new DataPasser(searchActivity.this,latitude,longitude,city,country);
                 if (item.getItemId() == R.id.home) {
-                    goToHome();
+                    dataPasser.goToAnotherActivity(Home.class);
                 } else if (item.getItemId() == R.id.forecast) {
-                    goToForecastActivity();
+                    dataPasser.goToAnotherActivity(ForecastActivity.class);
                 } else if (item.getItemId() == R.id.search) {
                     Toast.makeText(searchActivity.this, "You are already in Search!", Toast.LENGTH_SHORT).show();
                 }
                 return false;
             }
         });
-    }
-    private void goToForecastActivity(){
-        Intent i = new Intent(this, ForecastActivity.class);
-        i.putExtra("lat", latitude);
-        i.putExtra("lon", longitude);
-        i.putExtra("city", city);
-        i.putExtra("country", country);
-        startActivity(i);
-        overridePendingTransition(0, 0);
-
-    }
-    private void goToHome(){
-        Intent i = new Intent(this, Home.class);
-        i.putExtra("lat", latitude);
-        i.putExtra("lon", longitude);
-        i.putExtra("city", city);
-        i.putExtra("country", country);
-        startActivity(i);
-        overridePendingTransition(0, 0);
     }
 
     private void NoInternetConnectionAction(){
@@ -351,6 +333,8 @@ public class searchActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        goToHome();
+
+        DataPasser dataPasser=new DataPasser(searchActivity.this,latitude,longitude,city,country);
+        dataPasser.goToAnotherActivity(Home.class);
     }
 }

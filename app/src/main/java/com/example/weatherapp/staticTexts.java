@@ -5,7 +5,7 @@ public class staticTexts {
     public static final String USER_LOCATION_DB_CREATION="CREATE TABLE userLocation(id INTEGER PRIMARY KEY,lon VARCHAR(30) NOT NULL, lat VARCHAR(30) NOT NULL,city VARCHAR(15) NOT NULL);";
     public static final String REMOVE_IF_EXISTS_USER_LOCATION_DB="DROP TABLE IF EXISTS userLocation";
     public static final String FROM_FORECAST_REPORT_ACTIVITY="FORECAST";
-    public static final String FROM_SEARCH_ACTIVITY="SEARCH ";
+    public static final String FROM_SEARCH_ACTIVITY="SEARCH";
     public static String weeklyDataURL(double lat, double lon){
         return "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&exclude=hourly,minutly&appid="+API_KEY;
     }

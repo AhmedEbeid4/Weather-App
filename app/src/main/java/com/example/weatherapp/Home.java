@@ -89,12 +89,13 @@ public class Home extends AppCompatActivity {
         bar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
+                DataPasser dataPasser=new DataPasser(Home.this,latitude,longitude,city,country);
                 if (item.getItemId() == R.id.home) {
                     Toast.makeText(Home.this, "You are already in home!", Toast.LENGTH_SHORT).show();
                 } else if (item.getItemId() == R.id.forecast) {
-                    goToForecastActivity();
+                    dataPasser.goToAnotherActivity(ForecastActivity.class);
                 } else if (item.getItemId() == R.id.search) {
-                    goToSearchActivity();
+                    dataPasser.goToAnotherActivity(searchActivity.class);
                 }
                 return false;
             }
@@ -218,26 +219,6 @@ public class Home extends AppCompatActivity {
         HumidityTextView.setText(""+w.getHumidity());
         windDegreeTextView.setText(""+w.getWindDegree());
         windSpeedTextView.setText(""+w.getWindSpeed());
-    }
-    private void goToForecastActivity(){
-            Intent i = new Intent(this, ForecastActivity.class);
-            i.putExtra("lat", latitude);
-            i.putExtra("lon", longitude);
-            i.putExtra("city", city);
-            i.putExtra("country", country);
-            startActivity(i);
-            overridePendingTransition(0, 0);
-
-    }
-    private void goToSearchActivity(){
-        Intent i = new Intent(this, searchActivity.class);
-        i.putExtra("lat", latitude);
-        i.putExtra("lon", longitude);
-        i.putExtra("city", city);
-        i.putExtra("country", country);
-        startActivity(i);
-        overridePendingTransition(0, 0);
-
     }
 
     @Override

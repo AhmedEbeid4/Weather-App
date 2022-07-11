@@ -101,12 +101,14 @@ public class ForecastActivity extends AppCompatActivity {
         bar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
+
+                DataPasser dataPasser=new DataPasser(ForecastActivity.this,latitude,longitude,city,country);
                 if (item.getItemId() == R.id.home) {
-                    goToHome();
+                    dataPasser.goToAnotherActivity(Home.class);
                 } else if (item.getItemId() == R.id.forecast) {
                     Toast.makeText(ForecastActivity.this, "You are already in Forecast!", Toast.LENGTH_SHORT).show();
                 } else if (item.getItemId() == R.id.search) {
-                    goToSearchActivity();
+                    dataPasser.goToAnotherActivity(searchActivity.class);
                 }
                 return false;
             }
@@ -160,15 +162,6 @@ public class ForecastActivity extends AppCompatActivity {
         adapter.setWeatherArrayList(weatherArrayList1);
         forecastReportRecyclerView.setAdapter(adapter);
     }
-    private void goToHome(){
-        Intent i = new Intent(this, Home.class);
-        i.putExtra("lat", latitude);
-        i.putExtra("lon", longitude);
-        i.putExtra("city", city);
-        i.putExtra("country", country);
-        startActivity(i);
-        overridePendingTransition(0, 0);
-    }
     private void goToShowWeather(Weather weather){
         Intent i = new Intent(this, Home.class);
         i.putExtra("lat", latitude);
@@ -180,19 +173,10 @@ public class ForecastActivity extends AppCompatActivity {
         startActivity(i);
         overridePendingTransition(0, 0);
     }
-    private void goToSearchActivity(){
-        Intent i = new Intent(this, searchActivity.class);
-        i.putExtra("lat", latitude);
-        i.putExtra("lon", longitude);
-        i.putExtra("city", city);
-        i.putExtra("country", country);
-        startActivity(i);
-        overridePendingTransition(0, 0);
-
-    }
 
     @Override
     public void onBackPressed() {
-        goToHome();
+        DataPasser dataPasser=new DataPasser(ForecastActivity.this,latitude,longitude,city,country);
+        dataPasser.goToAnotherActivity(Home.class);
     }
 }

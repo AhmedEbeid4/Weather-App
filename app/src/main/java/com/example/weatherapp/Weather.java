@@ -140,7 +140,6 @@ public class Weather implements Parcelable {
             a=a+doubleToString.charAt(i);
 
         }
-        a=a+doubleToString.charAt(t+1);
         return a;
     }
     public String getTempWithC(){
