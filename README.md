@@ -45,8 +45,14 @@ If you had downloded the project you have to get an API key from openweathermap 
 
 <h3>Note</h3> 
 - The images is from the Api.
+
+
+
+
+
+
 - change the icon of the app after download it.
-</h3>
+
 
 
 
