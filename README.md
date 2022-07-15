@@ -7,7 +7,6 @@
 
 
 
-
 I had used Rest API which called openweathermap to get the weather data.
 
 the application gets the location of the user while looping in the spalsh screen, Then getting the weather data of his location via The API using ION package, and by getting some data from Json Arrays and Objects from the API.
