@@ -43,11 +43,10 @@ If you had downloded the project you have to get an API key from openweathermap 
 
 <h3> And you can donwload The Application via this <a href="https://drive.google.com/file/d/1f_R-Z0UPNH6TanUvb10-e6GUFgGH-F6U/view?usp=sharing">Link</a></h3> 
 
-<h3>Note</h3> 
+
+<details>
+<summary>Note</summary>
 <p>- The images is from the Api.</p>
-<p>- change the image asset of the app after download it.</p>
-
-
-
+<p>- change the image asset of the app after download it.</p></details>
 
 
