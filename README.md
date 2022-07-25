@@ -45,7 +45,7 @@ If you had downloded the project you have to get an API key from openweathermap 
 
 
 <details>
-<summary>Note</summary>
+<summary><h3>Note</h3></summary>
 <p>- The images is from the Api.</p>
 <p>- change the image asset of the app after download it.</p></details>
 
